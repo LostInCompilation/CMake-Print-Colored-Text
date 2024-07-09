@@ -2,6 +2,10 @@
 
 A small and easy to use helper to include in your CMake build system to have colored text output, independent of the used Terminal or operating system.
 
+<p align="center">
+<img src="/img/title_img.png" alt="Title image" width="70%"/>
+</p>
+
 ## Contents
 - [Description](#description)
 - [Usage](#usage)
@@ -53,7 +57,7 @@ colorFormatText(COLOR GREEN "This is green:")
 message("${COLOR_FORMATTED_TEXT} This is without color")
 ```
 
-<h3 align="auto">Result</h3>
+<h3>Result</h3>
 <p align="center">
 <img src="/img/partial_color.png" alt="Partial Color" width="70%"/>
 </p>
@@ -73,7 +77,7 @@ colorFormatTextAppend(COLOR MAGENTA "test")
 message("${COLOR_FORMATTED_TEXT_COMBINED}")
 ```
 
-<h3 align="auto">Result</h3>
+<h3>Result</h3>
 <p align="center">
 <img src="/img/multi_color_append.png" alt="Multi Color" width="70%"/>
 </p>
