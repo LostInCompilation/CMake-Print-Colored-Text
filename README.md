@@ -47,7 +47,7 @@ messageWithColor(BOLD COLOR GREEN "My message in bold text and green color")
 
 ### Printing only parts of the message with color and/or styles
 To print a part of the message with colors and/or styles, there is another function called `colorFormatText(...)`. It takes the same arguments as `messageWithColor(...)`, but doesn't print anything directly.
-Instead `colorFormatText(...)` sets the variable `COLOR_FORMATTED_TEXT`, which contains the formatted text that you can print yourself. This way you can append unformatted text to formatted text:
+Instead `colorFormatText(...)` sets the variable `COLOR_FORMATTED_TEXT` that you can print yourself. This way you can append unformatted text to formatted text:
 
 ```cmake
 # Formatted text is saved in COLOR_FORMATTED_TEXT
@@ -63,8 +63,8 @@ message("${COLOR_FORMATTED_TEXT} This is without color")
 </p>
 
 ### Using multiple colors in one message
-To print a message with multiple colors and/or styles, you can use the `colorFormatTextAppend(...)` function. It takes the same arguments as `colorFormatText(...)` and doesn't print anything directly.
-Instead it *appends* the given string to the `COLOR_FORMATTED_TEXT_COMBINED` variable, which includes all parts of the formatted text that you can print yourself:
+To print a message with multiple colors and/or styles, you can use the `colorFormatTextAppend(...)` function. It takes the same arguments as `colorFormatText(...)`, but doesn't print anything on it's own.
+Instead it *appends* the given string to the `COLOR_FORMATTED_TEXT_COMBINED` variable, that you can print yourself:
 
 ```cmake
 # Append multiple strings with different colors and styles
