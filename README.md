@@ -52,7 +52,7 @@ message("${COLOR_FORMATTED_TEXT} This is without color")
 ```
 **Result:**
 <p align="center">
-<img src="/img/partial_color.png" alt="Partial Color" max_width=70%/>
+<img src="/img/partial_color.png" alt="Partial Color" width="70%"/>
 </p>
 
 ### Using multiple colors in one message
