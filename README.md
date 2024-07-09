@@ -1,6 +1,6 @@
 # CMake Print Colored Text
 
-A small helper to include in your CMake build system to have colored text output, independent of the used Terminal or operating system.
+A small and easy to use helper to include in your CMake build system to have colored text output, independent of the used Terminal or operating system.
 
 ## Contents
 - [Description](#description)
@@ -9,6 +9,7 @@ A small helper to include in your CMake build system to have colored text output
     - [Printing only parts of the message with color and/or styles](#printing-only-parts-of-the-message-with-color-andor-styles)
     - [Using multiple colors in one message](#using-multiple-colors-in-one-message)
 - [Supported colors and styles](#supported-colors-and-styles)
+
 *See also: [License (zlib)](LICENSE.md)*
 
 ## Description
@@ -16,7 +17,7 @@ The normal `message(...)` command in CMake sadly doesn't support custom colors o
 This helper **does not** use ANSI escape codes directly to print the colors and styles. It is fully compatible with every Terminal and every operating system.
 
 ## Usage
-Copy the file `colorFormatting.cmake` next to your ***CMakeLists.txt*** and include it in your ***CMakeLists.txt***:
+Just copy the file `colorFormatting.cmake` next to your ***CMakeLists.txt*** and include it in your ***CMakeLists.txt***:
 ```cmake
 include("colorFormatting.cmake")
 ```
@@ -79,7 +80,8 @@ message("${COLOR_FORMATTED_TEXT_COMBINED}")
 
 
 ## Supported colors and styles
-Supported colors: **NORMAL**, **BLACK**, **RED**, **GREEN**, **YELLOW**, **BLUE**, **MAGENTA**, **CYAN**, **WHITE**
-Supported styles: **BOLD**
+| Color | Style |
+|:-------:|:-------:|
+| <table> <tr><td>NORMAL</td></tr> <tr><td>BLACK</td></tr> <tr><td>RED</td></tr> <tr><td>GREEN</td></tr> <tr><td>YELLOW</td></tr> <tr><td>BLUE</td></tr> <tr><td>MAGENTA</td></tr> <tr><td>CYAN</td></tr> <tr><td>WHITE</td></tr> </table> | <table> <tr><td>BOLD</td></tr> </table> |
 
-If an invalid color argument is passed to any of the above functions, the text will be printed without any color change. No error message is printed.
+**NOTE:** If an invalid color argument is passed to any of the above functions, the text will be printed without any color change. *No error message is printed.*
