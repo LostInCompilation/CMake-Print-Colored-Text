@@ -27,12 +27,13 @@ To print a whole message with one color and/or style you can use the `messageWit
 ```cmake
 messageWithColor(COLOR BLUE "My message with blue color")
 ```
-
-To print a message using bold text use this argument:
+#### Bold
+To print a message using bold text and no color change use this argument:
 ```cmake
 messageWithColor(BOLD "My message in bold text")
 ```
 
+#### Color and bold
 The bold style and colors can also be combined:
 ```cmake
 messageWithColor(BOLD COLOR GREEN "My message in bold text and green color")
@@ -46,12 +47,12 @@ To print a part of the message with colors and/or styles, there is another funct
 # Formatted text is saved in COLOR_FORMATTED_TEXT
 colorFormatText(COLOR GREEN "This is green:")
 
-# Print the formatted text with unformatted text
+# Print the formatted text and append unformatted text
 message("${COLOR_FORMATTED_TEXT} This is without color")
 ```
 **Result:**
-<p align="center" width="70%">
-<img src="/img/partial_color.png" alt="Partial Color"/>
+<p align="center">
+<img src="/img/partial_color.png" alt="Partial Color" max_width=70%/>
 </p>
 
 ### Using multiple colors in one message
